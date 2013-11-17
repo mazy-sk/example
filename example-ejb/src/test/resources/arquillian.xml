@@ -9,7 +9,7 @@
         <property name="deploymentExportPath">target/deployments</property>
     </engine>
 
-	<container qualifier="glassfish-remote" default="true">
+	<container qualifier="glassfish-remote" >
 		<configuration>
 			<property name="adminUser">admin</property>
 			<property name="adminPassword">admin</property>
@@ -17,7 +17,7 @@
 		</configuration>
 	</container>
 	
-	<container qualifier="glassfish-embedded" > 
+	<container qualifier="glassfish-embedded" default="true"> 
      <configuration> 
           <property name="resourcesXml"> 
           src/test/resources/glassfish-embedded/glassfish-resources.xml 
