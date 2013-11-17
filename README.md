@@ -17,8 +17,11 @@ asadmin start-domain
 
 #### Vytvorenie queue a connection factory
 1. Nastaviť heslo admina v `$EXAMPLE_PROJECT/config/passwordfile` ak je iné ako "admin"
-2. Spustiť ```asadmin --user=admin --passwordfile=$EXAMPLE_PROJECT/config/passwordfile \
-add-resources $EXAMPLE_PROJECT/config/glassfish-resources.xml```
+2. Spustiť 
+```
+asadmin --user=admin --passwordfile=$EXAMPLE_PROJECT/config/passwordfile \
+add-resources $EXAMPLE_PROJECT/config/glassfish-resources.xml
+```
 
 Vytvorené resources možno skontrolovať cez http://localhost:4848/ alebo cez asadmin
 ```
@@ -42,8 +45,14 @@ V prípade, že počas deployovania došlo k chybe, treba pozreť do server.log
 3. Správy možno posielať cez HermesJMS
 
 #### Testovacie prípady
-1. Request `Hello world`, Response `world`
-2. Request `Something`, Response `ERROR: Valid payload is only "Hello world"`
-3. Request `MapMessage` Response `Received message of wrong type: class com.sun.messaging.jms.ra.DirectMapPacket. Allowed are only text messages!`
-pozn. Správa `MapMessage` spôsobí, že klient pošle správu typu `javax.jms.MapMessage`. Implementovaný Message driven bean spracováva len správy `javax.jms.TextMessage`. Temto prípad simuluje odoslanie správy inej ako TextMessage cez HermesJMS.
+1. Request `Hello world`
+   Response `world`
+2. Request `Something`
+   Response `ERROR: Valid payload is only "Hello world"`
+3. Request `MapMessage`
+   Response `Received message of wrong type: class com.sun.messaging.jms.ra.DirectMapPacket. Allowed are only text messages!`
+
+pozn. Správa `MapMessage` spôsobí, že klient pošle správu typu `javax.jms.MapMessage`.
+Implementovaný Message driven bean spracováva len správy `javax.jms.TextMessage`.
+Temto prípad simuluje odoslanie správy inej ako TextMessage cez HermesJMS.
 
