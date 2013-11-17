@@ -2,7 +2,7 @@
 EJB - JMS - JAX-WS
 
 #### Inštalácia servera
-1. Stiahnuť poslednú verziu Java EE6 z achvívu : [glassfish-3.1.2.2.zip]http://download.java.net/glassfish/3.1.2.2/release/glassfish-3.1.2.2.zip
+1. Stiahnuť poslednú verziu Java EE6 z achvívu : [glassfish-3.1.2.2.zip](http://download.java.net/glassfish/3.1.2.2/release/glassfish-3.1.2.2.zip)
 2. Po rozbalení zip archívu treba nastaviť premenné prostredia
 ```
 export GLASSFISH_HOME=/data/work/development/tools/glassfish-3.1.2.2
