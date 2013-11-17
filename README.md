@@ -17,13 +17,13 @@ asadmin start-domain
 
 #### Vytvorenie queue a connection factory
 1. Nastaviť heslo admina v `$EXAMPLE_PROJECT/config/passwordfile` ak je iné ako "admin"
-2. Spustiť 
+2. Spustiť
 ```
-asadmin --user=admin --passwordfile=$EXAMPLE_PROJECT/config/passwordfile
-\ add-resources $EXAMPLE_PROJECT/config/glassfish-resources.xml
+asadmin --user=admin --passwordfile=$EXAMPLE_PROJECT/config/passwordfile \
+add-resources $EXAMPLE_PROJECT/config/glassfish-resources.xml
 ```
 
-Vytvorené resources možno skontrolovať cez http://localhost:4848/ alebo cez asadmin
+3. Vytvorené resources možno skontrolovať cez http://localhost:4848/ alebo cez asadmin
 ```
 asadmin --user=admin --passwordfile=$EXAMPLE_PROJECT/config/passwordfile list-jms-resources
 jms/ExampleQueue
